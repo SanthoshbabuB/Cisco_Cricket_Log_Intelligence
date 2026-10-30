@@ -38,11 +38,9 @@ Install the following before running the project:
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/SanthoshbabuB/Cisco_Cricket_Log_Intelligence.git
 cd "Cisco Cricket_log Intelligence"
 ```
-
-Replace the repository URL with your actual GitHub URL.
 
 ### 2. Configure environment variables
 
