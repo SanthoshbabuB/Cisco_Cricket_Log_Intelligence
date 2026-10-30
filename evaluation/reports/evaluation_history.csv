@@ -1,0 +1,61 @@
+﻿run_id,run_started_at,test_id,category,query,http_status,latency_ms,api_success,expected_api_success,expected_route,actual_route,route_pass,result_count,retrieval_keyword_pass,matched_result_keywords,missing_result_keywords,answer,expected_answer,answer_match,answer_keyword_pass,matched_answer_keywords,missing_answer_keywords,error,test_pass
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC001,exact_query,Show LBW events in MATCH001,200,41.51,True,True,mongodb_exact_query,mongodb_exact_query,True,5,True,"MATCH001, lbw",,Found 5 returned events for MATCH001.,,,False,,lbw,,False
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC002,semantic_search,Find deliveries that resulted in a wicket,200,14656.11,True,True,,qdrant_rag,,5,True,wicket,,"Based on the provided data, there are no deliveries that resulted in a wicket. The only event with a wicket is Event 2, which involved Player 2 taking a wicket during a match played by Team A against Team B. No other events have been recorded for deliveries resulting in a wicket.",,,True,wicket,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC003,player_search,Show events involving <PLAYER_NAME>,200,12006.21,True,True,,qdrant_rag,,5,False,,<PLAYER_NAME>,"To answer this question, I'll identify the players involved in each event:
+
+Event 1:
+- Player: Player 1
+- Team: Team C
+
+Event 4:
+- Player: Player 2
+- Team: Team C
+
+Event 5:
+- Player: Player 8
+- Team: Team A
+
+From this information, we can see that the player involved in all events is Player 1. Therefore, there are no events involving Player 1.
+
+The answer is: No events involving Player 1.",,,,,,,False
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC004,team_search,Show events involving <TEAM_NAME>,200,9435.74,True,True,,qdrant_rag,,5,False,,<TEAM_NAME>,"Team A has the following events involving Team C:
+
+- Event 1: Over completed by Player 5 with 1 run.
+- Event 3: Over completed by Player 8 with 1 run.",,,,,,,False
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC005,match_search,Show all events from MATCH001,200,36.08,True,True,mongodb_exact_query,mongodb_exact_query,True,5,True,MATCH001,,Found 5 returned events for MATCH001.,,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC006,event_search,Find catches in the cricket logs,200,10540.06,True,True,,qdrant_rag,,5,True,catch,,"Based on the provided events, there are no catches mentioned. The only event that mentions a catch is Event 5, which states ""unexpected catch taken by Player 1 (bowler)."" No other events have caught fielders or recorded catches.
+
+Therefore, the answer is: There are no catches in the cricket logs.",,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC007,event_search,Find run-out events,200,10393.63,True,True,,qdrant_rag,,5,False,,run-out,"There are no specific run-out events mentioned in the provided records. The only event that mentions a run-out is Event 1, where Player 4 scored a run during a catch taken. No other events have been identified as run-outs based on the information given.",,,,,,,False
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC008,event_search,Find stumping events,500,47.42,False,True,,,,0,False,,stumping,,,,,,,Exact search failed. Please try again later.,False
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC009,boundary_search,Find fours and sixes,200,8544.77,True,True,,qdrant_rag,,5,,,,Player 8 engaged in four runs and scored one six.,,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC010,match_status,What is the status of MATCH001?,200,8.72,True,True,,mongodb_exact_query,,5,True,MATCH001,,Found 5 returned events for MATCH001.,,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC011,commentary,Show commentary for MATCH001,200,9.23,True,True,,mongodb_exact_query,,5,True,MATCH001,,Found 5 returned events for MATCH001.,,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC012,over_search,Show events from over <OVER_NUMBER>,200,9412.78,True,True,,qdrant_rag,,5,,,,"To answer your question about the events from an over number, I'll need to know which over number you're interested in. Could you please provide me with the specific over number or a range of over numbers?",,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC013,timestamp_search,Show cricket events around <TIMESTAMP>,200,12611.14,True,True,,qdrant_rag,,5,,,,"Based on the provided records, here are the cricket events around the timestamp ""2025-09-23T05:10:24"":
+
+1. Event 1: wicket taken (over 45 at Stadium 4)
+2. Event 2: multiple events observed (Player 6 performed wicket taken, while another over completed occurred in over 19)
+3. Event 3: multiple events observed (Player 1 performed wicket taken, while another run scored occurred in over 8)
+4. Event 4: pending review (",,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC014,runs_search,Find events where runs scored were 4,200,11869.63,True,True,,qdrant_rag,,5,,,,"Event 5: {'score': 0.6195, 'match_id': 'MATCH004', 'team': 'Team A', 'player': 'Player 4', 'event': 'run scored', 'runs': 0, 'over': 47, 'status': 'pending review', 'timestamp': '2025-10-03T02:54:24', 'commentary': 'Multiple events observed: Player 4 performed run scored, while another wide occurred in over 47.'}",,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC015,semantic_search,Which events led to a batter getting dismissed?,200,9351.03,True,True,,qdrant_rag,,5,,,,"Multiple events observed: Player 10 performed no ball, while another boundary hit occurred in over 4.",,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC016,semantic_search,Find moments where a fielder caught the ball,200,12581.56,True,True,,qdrant_rag,,5,True,catch,,"To find moments when a fielder caught the ball, I'll look at the events that mention ""catch taken"" and identify specific instances:
+
+1. Event 1 mentions a catch taken by Player 3 (fielder) in match ID 008.
+2. Event 4 mentions multiple catches made by different players.
+
+However, there are no specific moments where a fielder caught the ball mentioned in these events. The only instance is from Event 1, which shows a catch taken by Player 3.
+
+Therefore, based on the information provided:
+
+- No instances of a fielder catching",,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC017,match_summary,Summarize the events in MATCH001,200,10.15,True,True,,mongodb_exact_query,,5,True,MATCH001,,Found 5 returned events for MATCH001.,,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC018,player_statistics,How many runs did <PLAYER_NAME> score?,200,11024.75,True,True,,qdrant_rag,,5,False,,<PLAYER_NAME>,"Based on the provided information:
+
+- Event 5 shows that Player 8 scored 4 runs.
+- Event 1 shows that Player 1 scored 2 runs.
+
+Since we don't have any additional events to compare, we can only conclude from these two events. Therefore, the total number of runs scored by <PLAYER_NAME> is 6 (from Player 8) + 2 (from Player 1) = 8 runs.",,,,,,,False
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC019,unsupported_query,What was the weather on Mars during MATCH999?,200,7.88,True,True,,mongodb_exact_query,,0,,,,Found 0 returned events for MATCH999.,,,,,,,True
+ca02dac7011f,2026-10-28T12:33:00+00:00,TC020,empty_query,,400,16.59,False,False,,,,0,,,,,,,,,,,True

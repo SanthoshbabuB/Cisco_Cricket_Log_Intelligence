@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Log Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">C</div>
+                <div>
+                    <h2>Cricket IQ</h2>
+                    <p>LOG INTELLIGENCE</p>
+                </div>
+            </div>
+
+            <div class="sidebar-label">WORKSPACE</div>
+            <button class="nav-item active" type="button">
+                <span>⌕</span> Semantic Search
+            </button>
+            <div class="sidebar-label">SYSTEM STATUS</div>
+            <div class="status-item">
+                <span class="status-dot"></span>
+                Django API
+                <span class="status-text">Local</span>
+            </div>
+            <div class="status-item">
+                <span class="status-dot"></span>
+                Search Engine
+                <span class="status-text">Ready to test</span>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="status-dot"></span>
+                Local environment
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">CRICKET ANALYTICS / SEARCH</p>
+                    <h1>Cricket Log Intelligence</h1>
+                </div>
+                <div class="api-badge">
+                    <span class="status-dot"></span>
+                    Local API
+                </div>
+            </header>
+
+            <section class="welcome">
+                <div class="welcome-content">
+                    <span class="tag">AI-POWERED SEARCH</span>
+                    <h2>Every ball tells a story.</h2>
+                    <p>Search match commentary and discover relevant events
+                       using natural language.</p>
+                </div>
+                <div class="cricket-art" aria-hidden="true">🏏</div>
+            </section>
+
+            <section class="search-section">
+                <label for="query">What would you like to discover?</label>
+                <form id="search-form">
+                    <span class="search-icon">⌕</span>
+                    <input
+                        id="query"
+                        type="text"
+                        placeholder="e.g. Show me wickets in the final overs..."
+                        required
+                    >
+                    <select id="limit" aria-label="Number of results">
+                        <option value="5">5 results</option>
+                        <option value="10">10 results</option>
+                        <option value="20">20 results</option>
+                    </select>
+                    <button id="search-button" type="submit">Search →</button>
+                </form>
+
+                <div class="suggestions">
+                    <span>Try asking:</span>
+                    <button type="button" class="suggestion">
+                        Show wickets
+                    </button>
+                    <button type="button" class="suggestion">
+                        Find boundaries
+                    </button>
+                    <button type="button" class="suggestion">
+                        Match commentary
+                    </button>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div class="results-heading">
+                    <div>
+                        <p class="eyebrow">SEARCH OUTPUT</p>
+                        <h2>Relevant match events</h2>
+                    </div>
+                    <span id="result-count">No search yet</span>
+                </div>
+
+                <div id="message" class="message" role="status">
+                    Enter a question above to search your cricket logs.
+                </div>
+
+                <div id="results" class="results-list"></div>
+            </section>
+
+            <footer>
+                Cricket Log Intelligence <span>·</span> Powered by Django
+                and local AI
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
