@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Cisco Cricket Log Intelligence
 
 A containerized cricket log intelligence application that combines structured data storage, vector similarity search, and a local LLM to search and retrieve relevant cricket events using natural-language queries.
@@ -152,7 +151,3 @@ Persistent MongoDB and Qdrant data are stored in Docker volumes. Avoid `docker c
 - Authentication and API rate limiting.
 - Automated database backup and recovery.
 - Deployment to a remote server.
-=======
-# Cisco_Cricket_Log_Intelligence
-Cricket log intelligence using Django, MongoDB, Qdrant, and local LLM.
->>>>>>> 1a8175ea24448c9b3dcbd2dbd64d17d1aaf72927
