@@ -12,7 +12,6 @@ A containerized cricket log intelligence application that combines structured da
 - Exposes search functionality through a Django REST API.
 - Provides a web interface built with HTML, CSS, and JavaScript.
 - Runs Django, MongoDB, and Qdrant in Docker containers.
-+
 
 ## Technology Stack
 
